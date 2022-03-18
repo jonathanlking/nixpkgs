@@ -54,7 +54,6 @@ stdenv.mkDerivation rec {
 
   patches = optionals stdenv.isDarwin [
     ./darwin-compilation.patch
-    ./link-with-coreservices.patch
   ] ++ optionals stdenv.hostPlatform.isMusl [
     ./quark_init_on_demand.patch
     ./gobject_init_on_demand.patch
